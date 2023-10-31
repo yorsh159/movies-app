@@ -1,0 +1,7 @@
+<div>
+    
+    <img [src]="url" [alt]="alt" class="object-cover h-44 w-32 rounded-md animate-fade-right" (load)="onLoad()" [ngStyle]="{ display: hasLoaded ? '' : 'none'}">
+    
+    <img *ngIf="!hasLoaded" src="assets/spinner.svg" [alt]="alt" class="object-cover h-24 w-24 rounded-md" >
+    
+</div>

@@ -1,0 +1,17 @@
+<div class="p-3 h-screen bg-gradient-to-r from-cyan-500 to-blue-400">
+    <div class="flex justify-center drop-shadow-sm">
+        <h1 class="text-4xl font font-bold text-teal-300 drop-shadow-lg">MoviesApp</h1>
+    </div>
+
+    <div class="grid grid-cols-1 mt-5">
+        <p class="text-white font-semibold">Búsquedas recientes</p>
+        <ul *ngFor="let movies of moviesHistory;"
+            class="list-disc list-inside">
+            <li class="text-white font-semibold">
+                <button (click)="searchSidebar(movies)" class="capitalize">
+                    {{movies}}
+                </button>
+            </li>
+        </ul>
+    </div>
+</div>
